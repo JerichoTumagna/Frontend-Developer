@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+    <style>
+        body{
+            background-image: url("jps.jpg");
+        }
+    </style>
+</head>
+<body>
+   <header class="header">
+    <a href="Portfolio.html" class="Logo">My <span>Portfolio</span></a>
+    <nav class="navbar">
+        <a href="Portfolio.html">HOME</a>
+        <a href="aboutme.html">ABOUT ME</a>
+        <a href="#services">SERVICES</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+   </header>
+   <section id="about" class="about">
+    <div class="contents">
+        <h3>Hi, Everyone!</h3><br>
+        <h1>I'm<span class="tm">  </span></h1> 
+    </div>
+    <div class="image-container">
+        <img src="jp.jpg" id="splash">
+        </div>
+   </section>
+   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+   <script>
+    var typingEffect = new Typed(".tm", {
+        strings : ["Tumagna, Jericho", "Frontend Developer", "UI Designer"],
+        loop : true, 
+        typeSpeed : 100,
+        backSpeed : 80,
+        backDelay : 1500
+    })
+   </script>
+</body>
+</html>
