@@ -56,7 +56,7 @@ body{
     background-position: center;
     display: flex;
     align-items: center;
-    background-image: url("jps.jpg");
+    background-image: url("bb.png");
     padding: 70px 10%;
 }
 
@@ -69,8 +69,70 @@ body{
     background-position: center;
     display: flex;
     align-items: center;
-    background-image: url("pgs.jpg");
+    background-image: url("bb.png");
     padding: 70px 10%;
+}
+
+
+.box {
+    display: flex;
+    justify-content: center;
+    margin: 70px 0;
+    flex-wrap: nowrap;
+}
+
+.card {
+    background-color: #D0D4CA;
+    width: 250px;
+    height: 400px;
+    margin: 25px;
+    border-radius: 30px;
+}
+
+.cards {
+    height: 200px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 30px 30px 0 0;
+}
+
+.card h2 {
+    color: #101720;
+    font-size: 20px;
+    font-weight: 100px;
+}
+
+.card p {
+    color: #101720;
+    font-size: 20px;
+    font-weight: 100px;
+}
+
+.card:hover {
+    background-color: #D2E0FB;
+    color: #000000;
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+.imahe1 {
+    background-image: url("pic.jpg");
+    
+}
+
+.imahe2 {
+    background-image: url("gs.png");
+    
+}
+
+.imahe3 {
+    background-image: url("pic.jpg");
+    
+}
+
+.imahe4 {
+    background-image: url("pic.jpg");
+    
 }
 
 .contents {
@@ -108,7 +170,7 @@ body{
 }
 
 span {
-    color: black;
+    color: #2ca2f1;
 }
 
 .tm{
@@ -123,20 +185,19 @@ span {
     width: 40px;
     height: 400px;
     font-size: 25px;
-    color:#ced131;
+    color:#C4DFDF;
     text-decoration: none;
     margin: 30px 15px 30px 0;
 }
 
 .image-container {
     position: relative;
-    top: 20px;
-    right: 80px;
+    margin-top: -60px;
+    right: 40px;
     width: 400px;
     height: 400px;
     border-radius: 60%;
     overflow:hidden;
-    animation: animateUser 4s linear infinite;
 }
 
 .image-container img {
@@ -149,14 +210,7 @@ html {
     scroll-behavior: smooth;
 }
 
-@keyframes animateUser{
-    60%{
-        right: 20px;
-        top: 20px;
-    }
-}
-
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1000px){
     h1{
         font-size: 36px;
         line-height: 50px;
@@ -177,6 +231,21 @@ html {
         font-size: 23px;
         line-height: 30px;
     }
-
+    .card {
+        font-size: 250px;
+        line-height: 100px;
+    }
+    .cards {
+        font-size: 23px;
+        line-height: 30px;
+    }
+    .card h2 {
+        font-size: 23px;
+        line-height: 30px;
+    }
+    .card p {
+        font-size: 23px;
+        line-height: 30px;
+    }
    
 }
