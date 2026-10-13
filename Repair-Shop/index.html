@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jericho Repair Hub | Phone, Laptop, Tablet & Desktop Repair</title>
+  <meta name="description" content="Professional repair services for phones, laptops, tablets, and desktop computers." />
+  <style>
+    :root{--bg:#0b1220;--card:#121b2f;--accent:#45a3ff;--accent2:#58e6c2;--text:#f4f7fb;--muted:#aab5c7;--line:#22304d}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:linear-gradient(180deg,#09101d,#0f1830);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(9,16,29,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+    nav{display:flex;align-items:center;justify-content:space-between;min-height:74px;gap:20px}.brand{font-size:1.15rem;font-weight:800}.brand span{color:var(--accent)}
+    .navlinks{display:flex;gap:22px;color:var(--muted)}.navlinks a:hover{color:#fff}.menu{display:none;background:none;border:0;color:#fff;font-size:1.7rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:12px;border:1px solid transparent;font-weight:700;cursor:pointer;transition:.2s}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),#6f7cff);color:#fff}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(69,163,255,.25)}
+    .btn-outline{border-color:#35517b;background:transparent;color:#fff}.btn-outline:hover{background:#16233c}
+    .hero{padding:88px 0 70px}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}.eyebrow{color:var(--accent2);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem}
+    h1{font-size:clamp(2.5rem,5vw,5.4rem);line-height:.98;margin:.4em 0 .3em}.hero p{font-size:1.08rem;color:var(--muted);max-width:680px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .hero-card,.card,.contact-card{background:rgba(18,27,47,.86);border:1px solid var(--line);border-radius:22px;box-shadow:0 20px 60px rgba(0,0,0,.22)}
+    .hero-card{padding:28px}.device-stack{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.device{min-height:150px;border-radius:18px;padding:20px;background:linear-gradient(145deg,#16233b,#0e1729);border:1px solid #263a5e;display:flex;flex-direction:column;justify-content:space-between}.device .icon{font-size:2.2rem}
+    section{padding:70px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}.section-head h2{font-size:clamp(2rem,4vw,3.2rem);margin:0}.section-head p{color:var(--muted);max-width:620px}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{padding:24px}.card h3{margin:.5rem 0}.card p{color:var(--muted)}.price{font-weight:800;color:var(--accent2)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step-num{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#18375d;color:#8bc5ff;font-weight:800}
+    .contact-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px}.contact-card{padding:28px}.contact-list{display:grid;gap:12px;color:var(--muted)}
+    form{display:grid;grid-template-columns:1fr 1fr;gap:14px}form .full{grid-column:1/-1}input,select,textarea{width:100%;padding:14px;border-radius:11px;border:1px solid #314562;background:#0c1424;color:#fff;outline:none}textarea{min-height:130px;resize:vertical}
+    .notice{display:none;margin-top:14px;padding:12px 14px;border-radius:10px;background:#123729;color:#9ef0cd;border:1px solid #245b49}
+    footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);text-align:center}
+    @media(max-width:850px){.hero-grid,.contact-wrap{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.navlinks{display:none;position:absolute;top:74px;left:0;right:0;background:#0c1424;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.nav-cta{display:none}}
+    @media(max-width:560px){.grid,.device-stack,form{grid-template-columns:1fr}form .full{grid-column:auto}.hero{padding-top:55px}.section-head{display:block}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#home">Jericho <span>Repair Hub</span></a>
+      <div class="navlinks" id="navlinks">
+        <a href="#services">Services</a><a href="#process">How It Works</a><a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn-primary nav-cta" href="#booking">Book a Repair</a>
+      <button class="menu" id="menu" aria-label="Open menu">☰</button>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Fast • Reliable • Professional</div>
+        <h1>We repair the tech you use every day.</h1>
+        <p>Phone, laptop, tablet, and desktop repair with clear diagnostics, practical solutions, and transparent service options.</p>
+        <div class="actions"><a class="btn btn-primary" href="#booking">Book Repair</a><a class="btn btn-outline" href="tel:+639000000000">Call Us</a><a class="btn btn-outline" href="mailto:repair@example.com">Email Us</a></div>
+      </div>
+      <div class="hero-card">
+        <div class="device-stack">
+          <div class="device"><span class="icon">📱</span><strong>Phone Repair</strong><small>Screen, battery, charging</small></div>
+          <div class="device"><span class="icon">💻</span><strong>Laptop Repair</strong><small>Windows, Mac, hardware</small></div>
+          <div class="device"><span class="icon">📲</span><strong>Tablet Repair</strong><small>Display, battery, software</small></div>
+          <div class="device"><span class="icon">🖥️</span><strong>Desktop Repair</strong><small>Upgrades, diagnostics, build</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head"><div><div class="eyebrow">Our services</div><h2>Repairs for every device</h2></div><p>Choose a service below, then use the booking form to describe the issue. You can adjust prices, contact details, and service coverage anytime.</p></div>
+      <div class="grid">
+        <article class="card"><div>📱</div><h3>Cellphone</h3><p>Broken screens, weak batteries, charging issues, software errors, camera and speaker problems.</p><div class="price">Diagnostics available</div></article>
+        <article class="card"><div>💻</div><h3>Laptop</h3><p>Slow performance, OS issues, SSD/RAM upgrades, overheating, keyboard and display problems.</p><div class="price">Windows & Mac support</div></article>
+        <article class="card"><div>📲</div><h3>Tablet</h3><p>Screen repair, battery replacement, app/software issues, ports, buttons, speakers, and connectivity.</p><div class="price">Major brands supported</div></article>
+        <article class="card"><div>🖥️</div><h3>Desktop</h3><p>Troubleshooting, parts replacement, upgrades, gaming PC builds, cleanup, optimization, and networking.</p><div class="price">Home & office PCs</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="container">
+      <div class="section-head"><div><div class="eyebrow">Simple process</div><h2>How it works</h2></div></div>
+      <div class="steps">
+        <div class="card"><div class="step-num">1</div><h3>Tell us the problem</h3><p>Submit your device type and issue using the repair request form.</p></div>
+        <div class="card"><div class="step-num">2</div><h3>Get a diagnosis</h3><p>We inspect the device and confirm the repair recommendation before work starts.</p></div>
+        <div class="card"><div class="step-num">3</div><h3>Repair & return</h3><p>After approval, we complete the repair and let you know when it is ready.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container contact-wrap">
+      <div class="contact-card">
+        <div class="eyebrow">Contact</div><h2>Need help now?</h2>
+        <div class="contact-list">
+          <span>📞 <a href="tel:+639000000000">+63 900 000 0000</a></span>
+          <span>✉️ <a href="mailto:repair@example.com">repair@example.com</a></span>
+          <span>📍 Philippines</span>
+          <span>🕘 Mon–Sat, 9:00 AM–6:00 PM</span>
+        </div>
+      </div>
+      <div class="contact-card" id="booking">
+        <div class="eyebrow">Book a repair</div><h2>Send a repair request</h2>
+        <form id="repairForm">
+          <input id="name" placeholder="Your name" required />
+          <input id="phone" type="tel" placeholder="Phone number" required />
+          <select id="device" required><option value="">Select device</option><option>Cellphone</option><option>Laptop</option><option>Tablet</option><option>Desktop</option></select>
+          <input id="model" placeholder="Brand / model" />
+          <textarea class="full" id="issue" placeholder="Describe the problem" required></textarea>
+          <button class="btn btn-primary full" type="submit">Send Request</button>
+        </form>
+        <div class="notice" id="notice">Your repair request is ready. Your email app will open so you can send the details.</div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="container">© <span id="year"></span> Jericho Repair Hub. All rights reserved.</div></footer>
+<script>
+  const menu=document.getElementById('menu'),links=document.getElementById('navlinks');
+  menu.addEventListener('click',()=>links.classList.toggle('open'));
+  document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+  document.getElementById('year').textContent=new Date().getFullYear();
+  document.getElementById('repairForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    const n=document.getElementById('name').value.trim(),p=document.getElementById('phone').value.trim(),d=document.getElementById('device').value,m=document.getElementById('model').value.trim(),i=document.getElementById('issue').value.trim();
+    const subject=encodeURIComponent('Repair Request - '+d+' - '+n);
+    const body=encodeURIComponent('Name: '+n+'\nPhone: '+p+'\nDevice: '+d+'\nBrand/Model: '+m+'\n\nIssue:\n'+i);
+    document.getElementById('notice').style.display='block';
+    window.location.href='mailto:repair@example.com?subject='+subject+'&body='+body;
+  });
+</script>
+</body>
+</html>
